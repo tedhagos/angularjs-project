@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Post Author</title>
+</head>
+<body ng-controller="authorController">
+
+  <div class='flexbox'>
+     
+    <div id='left'>
+      <input type="text" placeholder="lastname"  ng-model="a.lastname"/></br>
+      <input type="text" placeholder="firstname" ng-model="a.firstname"/></br>
+      <hr />
+      <input type="text" placeholder="book" ng-model="booktemp"/>
+      <button ng-click="addBook(booktemp)">+</button>
+
+      <pre ng-bind="a | json">
+        Input Preview
+      </pre>
+      
+      <button ng-click="updateAuthor(a)">Update Author</button>
+    </div>
+
+    <div id='right' class='authorlist'>
+      <input type="text" placeholder="filter search" ng-model="list.search" />
+      <div ng-repeat="author in authors | filter:list.search">
+        <span class='authorline'>
+          {{author.firstname}} &nbsp;{{author.lastname}}
+          <a class='edit' ng-click="editAuthor(author)">&#9998; ...</a>
+        </span><p/>
+        <ul ng-repeat="book in author.books">
+          <li>{{book}}</li>
+        </ul>
+      </div> 
+    </div>
+
+  </div>
+
+  <script src='/components/angularjs/angular.js'></script>
+  <script src='/app/script.js'></script>
+  <style>
+/*
+    .flexbox, .indexflexbox {
+      display: -ms-flex;
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    #left {width: 40%; padding-left: 20px;}
+    #right {
+      -webkit-flex: 1;
+      -flex: 1;
+      padding-left: 20px;
+      text-align: left;
+      border-left: 1px dotted gray
+    }
+
+    input, button {font-size: 1.3em;}
+    input, button, pre {margin: 5px;}
+    pre {
+      padding: 3px;
+      font-size: .9em;
+      color: gray;
+      border: 2px dotted #CACACA;
+    }
+    .authorlist {
+      font-family: 'Tahoma';
+      font-size: .8em;
+    }
+      .authorlist li {
+        line-height: .8em;
+      }
+      hr {border:0;border-bottom: 1px dotted gray;}
+    .authorline {font-size: 1.4em; font-weight: bold;}
+  */
+  </style>
+</body>
+</html>
