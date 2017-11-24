@@ -1,0 +1,25 @@
+<div class="panel panel-default" ng-show="!!author">
+  <div class="panel-heading">
+    <h1>
+      {{ author.firstname}} {{author.lastname}} 
+    </h1>
+  </div>
+  <div class="panel-body">
+    <ul>
+      <li ng-repeat="book in author.books">
+        {{book}}
+        <a class="glyphicon glyphicon-trash" ng-click="deleteBook(book)"></a>
+      </li>
+    </ul>
+  </div>
+  <div class="panel-footer panel-info">
+
+    <form class="form-inline" role="form">
+      <div class="form-group has-feedback has-feedback-right">
+        <input type="text" add-enter class="form-control" ng-model="tempBook" placeholder="Add a book . . .">
+        <i class="form-control-feedback glyphicon glyphicon-plus"></i>            
+      </div>
+    </form>
+
+  </div>
+</div>

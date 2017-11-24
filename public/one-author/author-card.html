@@ -1,0 +1,12 @@
+<div class="panel panel-default" ng-show="!!author">
+  <div class="panel-heading">
+    <h1>
+      {{ author.firstname}} {{author.lastname}} 
+    </h1>
+  </div>
+  <div class="panel-body">
+    <ul>
+      <li ng-repeat="book in author.books">{{book}}</li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<html ng-app="app">
+<body style="padding: 10px">
+
+  <form class="form-inline" role="form">
+    <div class="form-group has-feedback has-feedback-right">
+        <input type="text" search-enter class="form-control" ng-model="authorSearch" placeholder="Search for author">
+        <i class="form-control-feedback glyphicon glyphicon-search"></i>            
+    </div>
+  </form>
+
+  <author-card></author-card>
+
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="add-book.js"></script>
+  <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
+</body>
+</html>

@@ -1,79 +1,18 @@
-<!DOCTYPE HTML>
 <html ng-app="app">
+<body style="padding: 10px">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>Post Author</title>
-</head>
-<body ng-controller="authorController">
+  <header></header>
 
-
-  <div class='toolbar'>
-    <div class='innertoolbar'>
-      <a class='nav' href="#/edit">Edit</a>
-      <a class='nav' href="#/add">Add</a>
-    </div>
+  <div class="well">
+    This is the machine problem
   </div>
-  <div ng-view></div>
-  
-  <script src='/components/angularjs/angular.js'></script>
-  <script src='/app/app.js'></script>
-  <script src='/components/angular-route/angular-route.js'></script> 
+  <ng-view></ng-view>
 
-  <style>
-    
-    html, body {margin:0; padding:0;}
+  <footer></footer>
 
-    .flexbox, .indexflexbox {
-      display: -ms-flex;
-      display: -webkit-flex;
-      display: flex;
-    }
-
-    .innertoolbar {padding-left: 20px; margin-top:20px; margin-bottom: 20px;}
-    #left {width: 40%; padding-left: 20px;margin-top:30px;}
-    #right {
-      -webkit-flex: 1;
-      -flex: 1;
-      padding-left: 20px;
-      text-align: left;
-      border-left: 1px dotted gray;
-    }
-
-    input, button {font-size: 1.3em;}
-    input, button, pre {margin: 5px;}
-    pre {
-      padding: 3px;
-      font-size: .9em;
-      color: gray;
-      border: 2px dotted #CACACA;
-    }
-    .authorlist {
-      font-family: 'Tahoma';
-      font-size: .8em;
-    }
-      .authorlist li {
-        line-height: .8em;
-      }
-      hr {border:0;border-bottom: 1px dotted gray;}
-    .authorline {font-size: 1.4em; font-weight: bold;}
-
-    .toolbar {
-      display:block;
-      background: #fbfbfb;
-      border-bottom: 1px solid #dedede  
-    }
-    .nav {
-      font-family: 'Helvetica Neueue', 'Helvetica', 'Arial';
-      font-size: 2em;
-      text-decoration: none;
-      color: red;
-    }
-    .edit {
-      color: orange;
-      cursor: pointer;
-    }
-
-  </style>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>  
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css"/>
 </body>
 </html>

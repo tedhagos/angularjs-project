@@ -1,0 +1,28 @@
+<html ng-app="app">
+<body style="padding: 10px" ng-controller="addAuthorCtrl">
+    
+<form>
+  <div class="form-group">
+    <input type="text" placeholder="last name" ng-model="author.lastname" class="form-control">
+    <input type="text" placeholder="first name" ng-model="author.firstname" class="form-control">
+    <input type="text" placeholder="book name" ng-model="tempbook" class="form-control">
+    <button class="btn btn-primary btn-sm" ng-click="addAuthor()">Add Author</button>    
+  </div>
+</form>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="add-author.js"></script>
+<link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
+<style>
+  form {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  input {
+    margin-bottom: 5px;
+  }
+</style>
+</body>
+</html>
