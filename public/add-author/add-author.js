@@ -7,9 +7,9 @@ app.controller('addAuthorCtrl', ($scope, $http) => {
   $scope.author = {};
   $scope.author.books = [];
 
-  $scope.addAuthor = () => {
+  $scope.addAuthor = (tempbook) => {
 
-    $scope.author.books.push($scope.tempbook);
+    $scope.author.books.push(tempbook);
     $scope.tempbook = null;
 
     let data = {
